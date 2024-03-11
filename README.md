@@ -1,4 +1,4 @@
-# Platalian.github.io
+# platalian.github.io
 A website for learning html / css / javascript and more.
 
 This will be a personal portfolio for all of my website projects and an online resume for those
