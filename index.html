@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>Redirecting</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Redirecting</title>
+  </head>
+  <body>
   Redirecting...
-</body>
-<script>
-  const queryString = window.location.search;
-  if (queryString !== "") {
-    const urlParams = new URLSearchParams(queryString);
-    const obsidianLink = urlParams.get("obsidian");
-    if (obsidianLink) {
-      window.location.href = obsidianLink;
-    }
+  </body>
+  <script>
+  if (window.location.search == ""){
+    window.location.href = "https://github.com/Platalian/platalian.github.io";
   } else {
-    window.location.href = "https://github.com/ewerx/x-redirect/";
-  }
-</script>
+    const queryString = window.location.search;
+    window.location.href = queryString.split("://")[0].substr(1) + "://" + queryString.split("://")[1];
+    window.close();
+  };
+  </script>
 </html>
 
 https://redirect.platalian.github.io/?obsidian://open?vault=DevBrain&file=Work%2FWGU%20Academy%20Pre-Calculus%2FStudying%20Pre-Calculus%20Module%203
